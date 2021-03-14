@@ -33,7 +33,7 @@ export default function Home() {
     }, [isAuthenticated]);
 
     function loadNotes() {
-        return API.get("notes", "/notes");
+        return API.get("notes", "/invalid_path");
     }
 
     function renderNotesList(notes) {
@@ -64,20 +64,20 @@ export default function Home() {
 
     function renderLander() {
         return (
-          <div className="lander">
-            <h1>Scratch</h1>
-            <p className="text-muted">A simple note taking app</p>
-            <div className="pt-3">
-              <Link to="/login" className="btn btn-info btn-lg mr-3">
-                Login
+            <div className="lander">
+                <h1>Scratch</h1>
+                <p className="text-muted">A simple note taking app</p>
+                <div className="pt-3">
+                    <Link to="/login" className="btn btn-info btn-lg mr-3">
+                        Login
               </Link>
-              <Link to="/signup" className="btn btn-success btn-lg">
-                Signup
+                    <Link to="/signup" className="btn btn-success btn-lg">
+                        Signup
               </Link>
+                </div>
             </div>
-          </div>
         );
-      }
+    }
 
     function renderNotes() {
         return (
